@@ -1,0 +1,26 @@
+{
+  "name": "midi-grabber",
+  "version": "0.0.0",
+  "description": "Stream midi data in and create temporarily route ranges to specific callbacks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmckegg/midi-grabber.git"
+  },
+  "keywords": [
+    "midi",
+    "filter",
+    "route",
+    "controller",
+    "button",
+    "launchpad"
+  ],
+  "dependencies": {
+    "through": "~2.3.4"
+  },
+  "author": "Matt McKegg",
+  "license": "MIT"
+}
