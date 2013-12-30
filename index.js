@@ -4,7 +4,9 @@ module.exports = function(){
   var grabber = Through(function(data){
     var filter = getFilter(data)
     if (filter){
-      filter.cb(data)
+      if (filter.cb(data) === false){
+        this.queue(data) /// still queue if cb returns false
+      }
     } else {
       this.queue(data)
     }
