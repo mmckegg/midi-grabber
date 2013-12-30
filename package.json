@@ -1,6 +1,6 @@
 {
   "name": "midi-grabber",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Stream midi data in and temporarily route ranges to specific callbacks.",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,6 @@
   "devDependencies": {
     "tape": "~2.3.2"
   },
-
   "testling": {
     "files": "test/*.js",
     "browsers": [
@@ -38,7 +37,6 @@
       "safari/latest"
     ]
   },
-
   "author": "Matt McKegg",
   "license": "MIT"
 }
