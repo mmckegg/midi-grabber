@@ -1,10 +1,10 @@
 {
   "name": "midi-grabber",
   "version": "0.0.0",
-  "description": "Stream midi data in and create temporarily route ranges to specific callbacks.",
+  "description": "Stream midi data in and temporarily route ranges to specific callbacks.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,9 @@
   ],
   "dependencies": {
     "through": "~2.3.4"
+  },
+  "devDependencies": {
+    "tape": "~2.3"
   },
   "author": "Matt McKegg",
   "license": "MIT"
