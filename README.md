@@ -1,6 +1,8 @@
 midi-grabber
 ===
 
+[![browser support](https://ci.testling.com/mmckegg/midi-grabber.png)](https://ci.testling.com/mmckegg/midi-grabber)
+
 Stream midi data in and temporarily route ranges to specific callbacks.
 
 [![NPM](https://nodei.co/npm/midi-grabber.png?compact=true)](https://nodei.co/npm/midi-grabber/)

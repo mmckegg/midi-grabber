@@ -12,7 +12,12 @@ test('catch all and release', function(t){
     t.ok(true, 'Note grabbed')
   })
   grabber.write([144, 36, 127])
-  grabber.write(new Buffer([144, 36, 127]))
+
+  if (global.Buffer){ // testling compat
+    grabber.write(new Buffer([144, 36, 127]))
+  } else {
+    grabber.write([144, 36, 127])
+  }
 
   grabber.removeAllListeners('data')
   grabber.on('data', function(data){

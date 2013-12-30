@@ -22,8 +22,23 @@
     "through": "~2.3.4"
   },
   "devDependencies": {
-    "tape": "~2.3"
+    "tape": "~2.3.2"
   },
+
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/latest",
+      "firefox/latest",
+      "firefox/nightly",
+      "chrome/latest",
+      "chrome/canary",
+      "opera/latest",
+      "opera/next",
+      "safari/latest"
+    ]
+  },
+
   "author": "Matt McKegg",
   "license": "MIT"
 }
