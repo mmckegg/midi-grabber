@@ -1,6 +1,6 @@
 {
   "name": "midi-grabber",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Stream midi data in and temporarily route ranges to specific callbacks.",
   "main": "index.js",
   "scripts": {
