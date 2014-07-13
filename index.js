@@ -2,28 +2,32 @@ var Through = require('through')
 
 module.exports = function(){
   var grabber = Through(function(data){
-    var filter = getFilter(data)
-    if (filter){
-      if (filter.cb(data) === false){
-        this.queue(data) /// still queue if cb returns false
+    
+    var filters = getFilters(data)
+
+    for (var i=0;i<filters.length;i++){
+      var filter = filters[i]
+      if (filter.cb(data) !== false){
+        return
       }
-    } else {
-      this.queue(data)
     }
+
+    // pass thru to queue
+    this.queue(data)
   })
 
-  function getFilter(data){
-    var result = null
-    filters.some(function(filter){
+  function getFilters(data){
+    var result = []
+    for (var i=0;i<filters.length;i++){
+      var filter = filters[i]
       if (
         checkFilter(filter[0], data[0]) && 
         checkFilter(filter[1], data[1]) && 
         checkFilter(filter[2], data[2]) 
       ) {
-        result = filter
-        return true
+        result.push(filter)
       }
-    })
+    }
     return result
   }
 
